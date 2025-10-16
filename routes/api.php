@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Domain\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,4 +14,11 @@ Route::get('/health', function () {
         'time' => now()->toIso8601String(),
         'app' => config('app.name')
     ]);
+});
+
+Route::get('/tasks', function () {
+    return Task::query()
+        ->latest('id')
+        ->limit(50)
+        ->get();
 });
