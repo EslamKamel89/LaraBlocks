@@ -39,7 +39,7 @@
     },
     "scripts": {
         "ide": [
-            "@php artisan ide-helper:models -R"
+            "@php artisan ide-helper:models -R --dir=app --dir=Modules"
         ],
         "setup": [
             "composer install",
