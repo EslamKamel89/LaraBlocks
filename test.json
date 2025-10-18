@@ -1,0 +1,327 @@
+{
+    "data": [
+        {
+            "title": "test title",
+            "description": "test description",
+            "is_done": false,
+            "due_at": {
+                "date": "2025-11-18T00:00:00+00:00",
+                "diff": "4 weeks from now",
+                "timestamp": 1763424000
+            },
+            "updated_at": {
+                "date": "2025-10-18T04:57:31+00:00",
+                "diff": "1 minute ago",
+                "timestamp": 1760763451
+            },
+            "created_at": {
+                "date": "2025-10-18T04:57:31+00:00",
+                "diff": "1 minute ago",
+                "timestamp": 1760763451
+            }
+        },
+        {
+            "title": "Delectus laudantium.",
+            "description": "Incidunt qui assumenda dolores possimus temporibus sint. Non sit aliquam doloribus laborum unde. Qui quis nulla saepe totam eum ipsam. Quae rerum saepe sed nulla.",
+            "is_done": false,
+            "due_at": null,
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Laudantium sint maxime.",
+            "description": "Ut consectetur unde est vel facilis quae eius. Est quia consequatur aut laborum. Sed sequi placeat delectus hic perferendis rem aliquid. Sit et hic sunt qui aut ut maiores.",
+            "is_done": false,
+            "due_at": {
+                "date": "2025-10-18T16:06:12+00:00",
+                "diff": "11 hours from now",
+                "timestamp": 1760803572
+            },
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "In et omnis.",
+            "description": "Voluptas et est sed voluptatem. Magni odio vel adipisci est. Et rerum et et quisquam ipsam. Nesciunt nihil dolor rerum necessitatibus aut qui.",
+            "is_done": true,
+            "due_at": {
+                "date": "2025-10-16T14:14:17+00:00",
+                "diff": "1 day ago",
+                "timestamp": 1760624057
+            },
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Illum vitae accusantium.",
+            "description": "Ab iusto nesciunt quo tempora quam reprehenderit. Qui ex sed a voluptas ducimus quaerat et. Iure quos nulla nam expedita sit repellat. Omnis a cumque vero est expedita hic soluta.",
+            "is_done": false,
+            "due_at": {
+                "date": "2025-10-22T03:34:34+00:00",
+                "diff": "3 days from now",
+                "timestamp": 1761104074
+            },
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Eos alias ut et.",
+            "description": "Ut vel perspiciatis sed tenetur. Sit non voluptas et veritatis ea. Unde quod harum dolores voluptatem eius eligendi.",
+            "is_done": false,
+            "due_at": {
+                "date": "2025-10-19T01:19:33+00:00",
+                "diff": "20 hours from now",
+                "timestamp": 1760836773
+            },
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Architecto sint laudantium.",
+            "description": "Ab eligendi nesciunt quo sunt accusantium. Repudiandae at ea eveniet odit. Expedita nam non accusamus laboriosam similique.",
+            "is_done": false,
+            "due_at": {
+                "date": "2025-10-23T07:38:04+00:00",
+                "diff": "5 days from now",
+                "timestamp": 1761205084
+            },
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Ea voluptatum nostrum facilis.",
+            "description": "Consequatur nesciunt voluptatum voluptas facere tempora molestias. Accusantium quia enim dolorem. Quo consequatur ratione accusamus dolor omnis ipsam vel. Dolores ut accusamus praesentium et consequatur inventore.",
+            "is_done": false,
+            "due_at": null,
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Laborum nesciunt laboriosam nam.",
+            "description": "Quibusdam eum nisi quod optio adipisci voluptatem veniam culpa. Et error quo quo. Accusantium nisi minima sequi commodi voluptas dolores quidem at. Alias qui aspernatur qui.",
+            "is_done": true,
+            "due_at": null,
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Nostrum dolore aut dolor.",
+            "description": "Debitis quas ut animi. Quia sed voluptatum ipsa ab. Id saepe id quo praesentium a vitae.",
+            "is_done": false,
+            "due_at": null,
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Sed mollitia ut at.",
+            "description": "Aut quidem sit quo officia. Optio quisquam ipsa officiis iste. Iure et fuga saepe enim quod minima.",
+            "is_done": true,
+            "due_at": null,
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Deleniti enim illum.",
+            "description": "Est itaque deleniti officiis repellat nihil autem nihil sunt. Quasi non laboriosam deleniti dolorem laudantium amet. Aliquam quod et tempora ea ducimus qui. Corrupti exercitationem dolorem itaque tenetur occaecati deserunt. Molestias aut officia voluptatem vero exercitationem.",
+            "is_done": false,
+            "due_at": null,
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Magnam dolorem et quod.",
+            "description": "Aspernatur inventore illo voluptate alias enim. Consequatur itaque rerum voluptatibus dolorum necessitatibus ut excepturi omnis. Sit rerum enim ad qui magni deserunt. Eum vitae placeat ut consequatur commodi.",
+            "is_done": true,
+            "due_at": null,
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Quas omnis assumenda.",
+            "description": "Sit consequuntur voluptas quia a voluptas. Molestiae magnam dolorum quaerat enim delectus. Ab possimus aut veritatis soluta.",
+            "is_done": false,
+            "due_at": {
+                "date": "2025-10-17T17:02:35+00:00",
+                "diff": "11 hours ago",
+                "timestamp": 1760720555
+            },
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Repudiandae quo esse.",
+            "description": "Consequatur rerum cum impedit dolore explicabo nam nemo. Dolore sint dignissimos placeat molestiae quis pariatur quae. Aperiam nisi quia veniam quae vitae. Veritatis sed esse dolor quis et debitis illo. Adipisci eos corrupti repellat officiis ipsa id.",
+            "is_done": false,
+            "due_at": null,
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        },
+        {
+            "title": "Consequatur non sed laborum nulla.",
+            "description": "Unde asperiores quasi nostrum voluptatibus rerum. Praesentium expedita quaerat facere deleniti.",
+            "is_done": false,
+            "due_at": {
+                "date": "2025-10-18T11:59:53+00:00",
+                "diff": "7 hours from now",
+                "timestamp": 1760788793
+            },
+            "updated_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            },
+            "created_at": {
+                "date": "2025-10-16T04:22:28+00:00",
+                "diff": "2 days ago",
+                "timestamp": 1760588548
+            }
+        }
+    ],
+    "links": {
+        "first": "http:\/\/127.0.0.1:8000\/api\/tasks?page=1",
+        "last": "http:\/\/127.0.0.1:8000\/api\/tasks?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; Previous",
+                "page": null,
+                "active": false
+            },
+            {
+                "url": "http:\/\/127.0.0.1:8000\/api\/tasks?page=1",
+                "label": "1",
+                "page": 1,
+                "active": true
+            },
+            {
+                "url": null,
+                "label": "Next &raquo;",
+                "page": null,
+                "active": false
+            }
+        ],
+        "path": "http:\/\/127.0.0.1:8000\/api\/tasks",
+        "per_page": 20,
+        "to": 16,
+        "total": 16
+    }
+}
