@@ -11,8 +11,10 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller {
     public function index() {
+        $perPage = (int) request('per_page', 20);
+        $perPage = min($perPage, 100);
         return TaskResource::collection(
-            Task::latest('id')->paginate(20),
+            Task::latest('id')->paginate($perPage),
         );
     }
 

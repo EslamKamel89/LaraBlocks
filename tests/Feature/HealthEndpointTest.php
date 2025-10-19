@@ -11,7 +11,7 @@ class HealthEndpointTest extends TestCase {
      * A basic feature test example.
      */
     public function test_example(): void {
-        $response =  $this->get('/api/health');
+        $response =  $this->get(route('api.v1.health'));
         $response
             ->assertOk()
             ->assertJsonStructure(['app', 'time', 'status'])
