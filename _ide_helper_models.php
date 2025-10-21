@@ -11,30 +11,6 @@
  */
 
 
-namespace App\Models\Domain{
-/**
- * @property int $id
- * @property string $title
- * @property string|null $description
- * @property bool $is_done
- * @property \Illuminate\Support\Carbon|null $due_at
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Database\Factories\Domain\TaskFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereDescription($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereDueAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereIsDone($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereUpdatedAt($value)
- */
-	class Task extends \Eloquent {}
-}
-
 namespace App\Models{
 /**
  * @property int $id
@@ -63,5 +39,29 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereUpdatedAt($value)
  */
 	class User extends \Eloquent {}
+}
+
+namespace Modules\Tasks\Models{
+/**
+ * @property int $id
+ * @property string $title
+ * @property string|null $description
+ * @property bool $is_done
+ * @property \Illuminate\Support\Carbon|null $due_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Modules\Tasks\Database\Factories\TaskFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereDueAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereIsDone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereUpdatedAt($value)
+ */
+	class Task extends \Eloquent {}
 }
 

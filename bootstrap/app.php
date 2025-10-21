@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Http\Request;
+use Modules\Tasks\Providers\TaskServiceProvider;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -23,5 +24,6 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withProviders([
         TelescopeServiceProvider::class,
+        TaskServiceProvider::class,
     ])
     ->create();

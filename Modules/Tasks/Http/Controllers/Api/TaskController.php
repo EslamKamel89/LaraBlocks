@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api\Domain;
+namespace Modules\Tasks\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Domain\CreateTaskRequest;
-use App\Http\Requests\Domain\UpdateTaskRequest;
-use App\Http\Resources\Domain\TaskResource;
-use App\Models\Domain\Task;
+use Modules\Tasks\Http\Requests\CreateTaskRequest;
+use Modules\Tasks\Http\Requests\UpdateTaskRequest;
+use Modules\Tasks\Models\Task;
 use Illuminate\Http\Request;
+use Modules\Tasks\Http\Resources\TaskResource;
 
 class TaskController extends Controller {
     public function index() {

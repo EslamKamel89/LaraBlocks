@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources\Domain;
+namespace Modules\Tasks\Http\Resources;
 
 use App\Http\Resources\Utils\DatetimeResource;
 use Carbon\Carbon;

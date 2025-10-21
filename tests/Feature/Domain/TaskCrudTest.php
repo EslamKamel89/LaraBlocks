@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Domain;
 
-use App\Models\Domain\Task;
+use Modules\Tasks\Models\Task;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;

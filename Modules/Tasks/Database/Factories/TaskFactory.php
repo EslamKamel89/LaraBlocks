@@ -1,18 +1,16 @@
 <?php
 
-namespace Database\Factories\Domain;
+namespace Modules\Tasks\Database\Factories;
+
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Tasks\Models\Task;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Domain\Task>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Tasks\Models\Task>
  */
 class TaskFactory extends Factory {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = Task::class;
     public function definition(): array {
         return [
             'title' => $this->faker->sentence(3),

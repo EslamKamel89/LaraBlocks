@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Domain\Task;
+use Modules\Tasks\Models\Task;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
