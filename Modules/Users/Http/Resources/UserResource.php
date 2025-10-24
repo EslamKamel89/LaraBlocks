@@ -1,0 +1,19 @@
+<?php
+
+namespace Modules\Users\Http\Resources;
+
+use App\Http\Resources\Utils\DatetimeResource;
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class UserResource extends JsonResource {
+
+    public function toArray(Request $request): array {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'email' => $this->email,
+            'created_at' => DatetimeResource::make($this->created_at)
+        ];
+    }
+}

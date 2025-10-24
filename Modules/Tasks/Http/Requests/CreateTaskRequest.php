@@ -13,6 +13,7 @@ class CreateTaskRequest extends FormRequest {
 
     public function rules(): array {
         return [
+            "user_id" => ["sometimes", "exists:users,id"],
             "title" => ['required', 'string', 'max:255'],
             "description" => ['nullable', 'string ', 'max:255'],
             "is_done" => ['sometimes', 'boolean'],
