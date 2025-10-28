@@ -44,7 +44,7 @@ class ApiV1TaskHappyPathTest extends TestCase {
                 'title' => 'updated',
                 'is_done' => true,
             ]);
-        $this->deleteJson(route('api.v1.tasks.destroy', ['task' => $id]))
+        $this->deleteJson(route('api.v1.tasks.destroy', ['task' => $id]), $headers)
             ->assertOk()
             ->assertJsonFragment(['deleted' => true]);
     }

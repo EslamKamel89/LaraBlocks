@@ -54,10 +54,15 @@ namespace Modules\Tasks\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int|null $user_id
  * @property-read \Modules\Users\Models\User|null $User
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task done(?int $flag)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task dueFrom(?string $from)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task dueTo(?string $to)
  * @method static \Modules\Tasks\Database\Factories\TaskFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task mine(?int $userId)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Task search(?string $term)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereDescription($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereDueAt($value)
