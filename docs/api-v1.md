@@ -16,6 +16,11 @@ Base URL: `/api/v1`
 ## Tasks
 
 -   `GET /tasks?per_page=20` → paginated list (cap 100)
+-   Options:
+    -   `page_mode=page|cursor` (default: page). Cursor mode forces `sort=id` for stability.
+    -   `mine=1` (auth required to be effective), `done=0|1`, `q=...`
+    -   `due_from=YYYY-MM-DD`, `due_to=YYYY-MM-DD`
+    -   `sort=id|due_at|created_at|updated_at`, `order=asc|desc` (default: id, desc)
 -   Filters:
     -   mine=1 (auth token required to be effective)
     -   done=0|1

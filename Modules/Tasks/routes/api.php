@@ -10,5 +10,8 @@ Route::prefix('v1')->name('api.v1.')->group(function () {
     Route::apiResource('/tasks', TaskController::class)->only(['index', 'show']);
     Route::middleware('auth:sanctum')->group(function () {
         Route::apiResource('/tasks', TaskController::class)->except(['index', 'show']);
+        Route::get('/tasks/export.csv', [TaskController::class, 'exportCSV'])
+            ->name('tasks.export.csv')
+            ->middleware('throttle:20,1');
     });
 });

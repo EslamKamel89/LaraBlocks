@@ -7,27 +7,23 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Validation\UnauthorizedException;
 use Modules\Tasks\Http\Requests\CreateTaskRequest;
+use Modules\Tasks\Http\Requests\TasksIndexRequest;
 use Modules\Tasks\Http\Requests\UpdateTaskRequest;
 use Modules\Tasks\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Modules\Tasks\Http\Resources\TaskResource;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class TaskController extends Controller {
     use AuthorizesRequests;
     public function __construct() {
         // $this->authorizeResource(Task::class, 'task');
     }
-    public function index(Request $request) {
-        $perPage = (int) request('per_page', 20);
-        $perPage = min($perPage, 100);
-        $q = request('q');
-        $mine = request()->boolean('mine', false);
-        $done = request('done', null);
-        $from = request('due_from');
-        $to = request('due_to');
-        $sort = in_array(request('sort'), ['id', 'due_at', 'created_at', 'updated_at']) ? request('sort') : 'id';
-        $order = request('order') === 'asc' ? 'asc' : 'desc';
+    public function index(TasksIndexRequest $request) {
+        $validated =  $request->validated();
+        [$perPage, $pageMode, $q, $mine, $done, $from, $to, $sort, $order] = $this->getFilters($validated);
+        /** @var \Illuminate\Database\Eloquent\Builder<\Modules\Tasks\Models\Task> $builder */
         $builder = Task::with('user')
             ->search($q)
             ->done($done)
@@ -36,10 +32,16 @@ class TaskController extends Controller {
         if ($mine) {
             $builder->mine($request->user()?->id);
         }
-        return TaskResource::collection(
-            $builder->orderBy($sort, $order)
-                ->paginate($perPage),
-        );
+        $builder->orderBy($sort, $order);
+        if ($pageMode == 'cursor' && $sort != 'id') {
+            $builder->getQuery()->orders = [];
+            $builder->orderBy('id', $order);
+        }
+        $paginator = $pageMode == 'cursor'
+            ? $builder->cursorPaginate($perPage)->withQueryString()
+            : $builder->paginate($perPage)->withQueryString();
+
+        return TaskResource::collection($paginator);
     }
 
     public function store(CreateTaskRequest $request) {
@@ -69,5 +71,50 @@ class TaskController extends Controller {
         Gate::authorize('delete', $task);
         $task->delete();
         return response()->json(['deleted' => true]);
+    }
+    public function exportCSV(TasksIndexRequest $request): StreamedResponse {
+        $validated = $request->validated();
+        [$perPage, $pageMode, $q, $mine, $done, $from, $to, $sort, $order] = $this->getFilters($validated);
+        /** @var \Illuminate\Database\Eloquent\Builder<\Modules\Tasks\Models\Task> $builder  */
+        $builder = Task::with('user')
+            ->search($q)
+            ->done($done)
+            ->dueFrom($from)
+            ->dueTo($to)
+            ->orderBy($sort, $order);
+        if ($mine) {
+            $builder->mine($request->user()?->id);
+        }
+        $headers = [
+            'Content-Type' => 'text/csv',
+            'Content-Disposition' => 'attachment; filename="tasks.csv"'
+        ];
+        return response()->stream(
+            function () use ($builder) {
+                $out = fopen('php://output', 'w');
+                fputcsv($out, ['id', 'title', 'description', 'is_done', 'due_at', 'user_id', 'user_email']);
+                $builder->chunk(500, function ($rows) use ($out) {
+                    foreach ($rows as $t) {
+                        fputcsv($out, [$t->id, $t->title, $t->description, $t->is_done, $t->due_at, $t->user_id, $t->user?->email]);
+                    }
+                });
+                fclose($out);
+            },
+            200,
+            $headers,
+        );
+    }
+    protected function getFilters(array $validated): array {
+        $perPage = (int) ($validated['per_page'] ?? 20);
+        $perPage = min($perPage, 100);
+        $pageMode = $validated['page_mode'] ?? 'page';
+        $q = $validated['q'] ?? null;
+        $mine =  (bool)($validated['mine'] ?? false);
+        $done = $validated['done'] ?? null;
+        $from = $validated['due_from'] ?? null;
+        $to = $validated['due_to'] ?? null;
+        $sort = $validated['sort'] ?? 'id';
+        $order = $validated['order'] ?? 'desc';
+        return [$perPage, $pageMode, $q, $mine, $done, $from, $to, $sort, $order];
     }
 }
