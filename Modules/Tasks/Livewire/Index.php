@@ -2,29 +2,29 @@
 
 namespace Modules\Tasks\Livewire;
 
+use Livewire\Attributes\On;
 use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Modules\Tasks\Models\Task;
 
 class Index extends Component {
-    use WithPagination;
     #[Url]
     public ?string $search = null;
     #[Url]
     public ?string $isDone = null;
 
+
+    #[On('filters-updated')]
+    public function updateFilters(?string $search = null, ?string $isDone = null) {
+        $this->search = $search;
+        $this->isDone = $isDone;
+    }
     public function render() {
-        $query = Task::query();
-        if ($this->search) {
-            $query->search($this->search);
-        }
-        if ($this->isDone === '1' || $this->isDone === '0') {
-            $flag = (bool)$this->isDone;
-            $query->done($flag);
-        }
-        $tasks = $query->paginate(10);
-        info('', ['tasks' => $tasks]);
-        return view('tasks::livewire.tasks.index', ['tasks' => $tasks, 'title' => 'Tasks']);
+        return view('tasks::livewire.tasks.index', [
+            'title' => 'Task',
+            'search' => $this->search,
+            'isDone' => $this->isDone,
+        ]);
     }
 }
