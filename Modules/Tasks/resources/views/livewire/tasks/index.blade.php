@@ -1,4 +1,3 @@
-<!-- i created default layout file at layouts/app and changed the configuration in the config/livewire.php to match the layout path, so no need to extends the layout file-->
 <div class="max-w-4xl mx-auto p-6 space-y-6">
     <h1 class="text-2xl font-semibold">Tasks</h1>
     <div class="flex gap-2">
