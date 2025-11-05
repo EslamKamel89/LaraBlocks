@@ -28,7 +28,7 @@ class Table extends Component {
             $flag = (bool)$this->isDone;
             $query->done($flag);
         }
-        $tasks = $query->latest()->paginate(10);
+        $tasks = $query->with(['user'])->latest()->paginate(10);
         return view('tasks::livewire.tasks.components.table', ['tasks' => $tasks]);
     }
 }

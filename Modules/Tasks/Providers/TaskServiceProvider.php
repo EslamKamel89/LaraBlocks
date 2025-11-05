@@ -10,6 +10,8 @@ use Modules\Tasks\Livewire\Components\Filters;
 use Modules\Tasks\Livewire\Components\Row;
 use Modules\Tasks\Livewire\Components\Table;
 use Modules\Tasks\Livewire\Index;
+use Modules\Tasks\Livewire\TasksCreate;
+use Modules\Tasks\Livewire\TasksEdit;
 use Modules\Tasks\Models\Task;
 use Modules\Tasks\Policies\TaskPolicy;
 
@@ -28,6 +30,8 @@ class TaskServiceProvider extends ServiceProvider {
         Livewire::component('tasks.components.filters', Filters::class);
         Livewire::component('tasks.components.row', Row::class);
         Livewire::component('tasks.components.table', Table::class);
+        Livewire::component('tasks.components.tasks-create', TasksCreate::class);
+        Livewire::component('tasks.components.tasks-edit', TasksEdit::class);
         Gate::policy(Task::class, TaskPolicy::class);
     }
 }

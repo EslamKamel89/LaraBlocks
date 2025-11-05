@@ -2,12 +2,14 @@
 
 use App\Http\Middleware\AttemptSanctumAuth;
 use App\Providers\TelescopeServiceProvider;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Http\Request;
 use Modules\Tasks\Providers\TaskServiceProvider;
 use Modules\Users\Providers\UserServiceProvider;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
