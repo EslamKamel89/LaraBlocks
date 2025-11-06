@@ -30,10 +30,7 @@
             <nav class="flex-1 space-y-1 p-3">
                 @php
                 $nav = [
-                ['label' => 'Dashboard', 'icon' => 'speedometer2', 'route' => 'tasks.index'],
                 ['label' => 'Tasks', 'icon' => 'check2-square', 'route' => 'tasks.index'],
-                ['label' => 'Users', 'icon' => 'people', 'route' => null],
-                ['label' => 'Settings', 'icon' => 'gear', 'route' => null],
                 ];
                 @endphp
 
@@ -107,18 +104,11 @@
                 </div>
 
                 <nav class="px-3 py-4 space-y-1">
-                    <a href="{{ route('tasks.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-50">
-                        <i class="bi bi-speedometer2"></i> Dashboard
-                    </a>
+
                     <a href="{{ route('tasks.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-50">
                         <i class="bi bi-check2-square"></i> Tasks
                     </a>
-                    <a href="#" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-50">
-                        <i class="bi bi-people"></i> Users
-                    </a>
-                    <a href="#" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-50">
-                        <i class="bi bi-gear"></i> Settings
-                    </a>
+
                 </nav>
 
                 <div class="mt-auto border-t p-3">

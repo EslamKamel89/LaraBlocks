@@ -22,11 +22,15 @@
         <!-- Actions -->
         <div class="flex flex-wrap items-center gap-2">
             @auth
-            <button
+            <a
+                href="{{ route(
+                'tasks.export' ,
+                array_filter(compact('isDone' , 'search') , fn($v)=>!$v)
+                ) }}"
                 class="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
                 <i class="bi bi-download"></i>
                 <span>Export</span>
-            </button>
+            </a>
 
             <a
                 wire:navigate
